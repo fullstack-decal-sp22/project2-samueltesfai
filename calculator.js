@@ -66,7 +66,10 @@ function makesSymbol(symbol) {
         flag1=false;
     }
     else if (symbol === "←") {
-        if(strbuffer.length==1){
+        if(flag1){
+            makesSymbol("C");
+        }
+        else if(strbuffer.length==1){
             strbuffer="0"
         }
         else if (strbuffer!=="0" ){
